@@ -1,4 +1,4 @@
-# Projects HTML/CSS practice
+#HTML/CSS practice from FreeCodeCamp.org
 
 Project 1 Tribute - https://codepen.io/rubbos/pen/YzwMBLx
 
