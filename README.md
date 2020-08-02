@@ -1,4 +1,4 @@
-#HTML/CSS practice from FreeCodeCamp.org
+<h1>HTML/CSS practice from FreeCodeCamp.org</h1>
 
 Project 1 - <a href="https://codepen.io/rubbos/pen/YzwMBLx">Tribute</a>
 
