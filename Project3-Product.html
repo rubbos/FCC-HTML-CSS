@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Landing Page</title>
+    <style>
+        body {
+            font-family: Helvetica, sans-serif;
+            font-weight: 500;
+            color: white;
+            background-color: hsla(200, 100%, 13%, 1);
+        }
+        
+        .header {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            background-color: white;
+            padding: 1.5em 0;
+            position: fixed;
+            width: 100vw;
+            top: 0;
+            margin: 0 0 0 -8px;
+        }
+        
+        .logo {
+            width: 60vw;
+            padding: 0 1em;
+        }
+        
+        #header-img {
+            max-width: 100%;
+        }
+        
+        #nav-bar {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            width: 40vw;
+        }
+        
+        .nav-link {
+            color: #191919;
+            font-size: 1.3rem;
+            text-decoration: none;
+        }
+        
+        .nav-link:hover {
+            color: #acacac;
+        }
+        
+        .product {
+            background-color: hsla(200, 100%, 20%, 1);
+            padding: 2rem;
+            line-height: 1.5rem;
+            text-align: center;
+            font-size: 1.2rem;
+        }
+        
+        button {
+            padding: 1rem 2rem;
+            font-size: 1.5rem;
+            background-color: hsla(45, 100%, 51%, 1);
+            color: #191919;
+        }
+        
+        #submit:hover,
+        button:hover {
+            background-color: hsla(45, 100%, 61%, 1);
+        }
+        
+        .grid-products {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: 1fr;
+            gap: 1em 1em;
+            grid-template-areas: "product-1 product-2 product-3";
+            padding: 2em 1em;
+        }
+        
+        .product-1 {
+            grid-area: product-1;
+        }
+        
+        .product-2 {
+            grid-area: product-2;
+        }
+        
+        .product-3 {
+            grid-area: product-3;
+        }
+        
+        .subtitle {
+            font-size: 2rem;
+            line-height: 4rem;
+        }
+        
+        .subtext {
+            padding: 1.5rem 0;
+        }
+        
+        .form {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            max-width: 800px;
+            font-size: 1.5rem;
+            margin: 7em auto 2em auto;
+        }
+        
+        .form input {
+            padding: 1rem 2rem;
+            font-size: 1.5rem;
+            background-color: hsla(45, 100%, 51%, 1);
+            color: #191919;
+            max-width: 300px;
+        }
+        
+        .form #email {
+            background-color: white;
+        }
+        
+        .video {
+            margin: 2em 0;
+            display: flex;
+            justify-content: center;
+        }
+        
+        @media only screen and (max-width: 700px) {
+            .logo {
+                width: 100vw;
+                text-align: center;
+            }
+            #nav-bar {
+                width: 100vw;
+                padding: 1em 0;
+            }
+            .header {
+                flex-direction: column;
+            }
+            .form {
+                margin-top: 9em;
+            }
+            iframe {
+                width: 560px;
+                height: 315px;
+            }
+            .form input {
+                width: 100%;
+            }
+            .grid-products {
+                grid-template-columns: 1fr;
+                grid-template-rows: repeat(3, 1fr);
+                grid-template-areas: "product-1" "product-2" "product-3";
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header id="header" class="header">
+        <div class="logo">
+            <a href="#home"><img id="header-img" src="https://www.veiligheids-sloten.nl/image/catalog/logo-new.png" alt="logo"></a>
+        </div>
+        <nav id="nav-bar">
+            <a class="nav-link" href="#form">Form</a>
+            <a class="nav-link" href="#video">Video</a>
+            <a class="nav-link" href="#products">Products</a>
+        </nav>
+    </header>
+    <form id="form" action="https://www.freecodecamp.org/email-submit" class="form">
+        <label for="email">Enter your email address to get started!</label>
+        <div class="inputs">
+            <input type="email" name="email" id="email" placeholder="Enter your email..." required>
+            <input type="submit" id="submit" value="Send">
+        </div>
+    </form>
+    <div class="video">
+        <iframe id="video" width="800" height="450" src="https://www.youtube.com/embed/btHxGxH4FpU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+    <div class="grid-products" id="products">
+        <div class="product product-1">
+            <div class="subtitle">Nemef NF3</div>
+            <span class="price">$80</span>
+            <div class="subtext"> ipsum. Lorem ipsum. Lorem ipsum dolor. Lorem ipsum.</div>
+            <div class="subbutton"><button>Bestellen</button></div>
+        </div>
+        <div class="product product-2">
+            <div class="subtitle">Nemef NF4</div>
+            <span class="price">$130</span>
+            <div class="subtext"> ipsum. Lorem ipsum. Lorem ipsum dolor. Lorem ipsum.</div>
+            <div class="subbutton"><button>Bestellen</button></div>
+        </div>
+        <div class="product product-3">
+            <div class="subtitle">Nemef NF5</div>
+            <span class="price">$190</span>
+            <div class="subtext"> ipsum. Lorem ipsum. Lorem ipsum dolor. Lorem ipsum.</div>
+            <div class="subbutton"><button>Bestellen</button></div>
+        </div>
+    </div>
+</body>
+
+</html>
