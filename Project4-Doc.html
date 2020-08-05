@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technical Document</title>
+    <style>
+        body {
+            background-color: #121212;
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        
+        .container {
+            display: grid;
+            grid-template-areas: "nav content content" "footer footer footer";
+            grid-template-columns: 200px 1fr;
+            grid-template-rows: auto 1fr auto;
+            grid-gap: 10px;
+            height: 100vh;
+        }
+        
+        nav {
+            grid-area: nav;
+            display: flex;
+            flex-direction: column;
+            background-color: #1f1f1f;
+            padding: 2rem;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 160px;
+        }
+        
+        .footer-link {
+            color: rgb(228, 228, 228);
+            transform: none;
+            text-decoration: none;
+        }
+        
+        .nav-link {
+            color: rgb(228, 228, 228);
+            transform: none;
+            text-decoration: none;
+            font-size: 1.2rem;
+            padding: 0.5rem 0;
+            border-top: 1px solid grey;
+        }
+        
+        .footer-link:hover,
+        .nav-link:hover {
+            color: white;
+        }
+        
+        main {
+            grid-area: content;
+        }
+        
+        footer {
+            grid-area: footer;
+            text-align: center;
+            font-size: 1.5rem;
+            padding: 2rem;
+        }
+        
+        header {
+            font-size: 2rem;
+        }
+        
+        .main-section {
+            margin: 1rem;
+            padding: 2rem;
+            background-color: #1e1e1e;
+        }
+        
+        .main-section:first-child {
+            margin-top: 0;
+        }
+        
+        .main-section:last-child {
+            margin-bottom: 0;
+        }
+        
+        @media (max-width: 768px) {
+            .container {
+                grid-template-areas: "nav" "content" "footer";
+                grid-template-columns: 1fr;
+                grid-template-rows: 1fr 1fr auto;
+            }
+            nav {
+                top: 0;
+                margin: 0;
+                position: relative;
+                height: fit-content;
+                width: auto;
+                margin: -0.5rem -0.5rem 2rem -0.5rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <nav id="navbar">
+            <header>Guide</header>
+            <a class="nav-link" href="#lorem">Lorem</a>
+            <a class="nav-link" href="#ipsum">Ipsum</a>
+            <a class="nav-link" href="#dolor">Dolor</a>
+            <a class="nav-link" href="#sit">Sit</a>
+            <a class="nav-link" href="#amet">Amet</a>
+        </nav>
+        <main id="main-doc">
+            <section class="main-section" id="lorem">
+                <header>Lorem</header>
+                <p>Vivamus et orci dictum, tempus erat ut, sagittis tellus. Cras a erat in velit tempor dignissim. Aliquam dignissim lacinia vestibulum. Duis luctus faucibus cursus. Sed sed nibh ac mi vehicula facilisis. Cras maximus est nec magna maximus
+                    maximus. Sed nec elit ut lorem auctor sollicitudin. Morbi vitae lacus vel odio molestie ullamcorper. Proin sollicitudin tortor eu suscipit iaculis. Curabitur malesuada nisi ac est vestibulum, ac aliquam metus consequat.</p>
+                <code>if (condition) { statement_1; } else { statement_2; }</code>
+                <p>Pellentesque pellentesque vel nisl sed malesuada. Etiam sollicitudin ultricies nisi, eget auctor sapien egestas vel. Pellentesque efficitur eros vitae purus cursus elementum. Nam at sapien a magna ullamcorper fringilla at eu lorem. Pellentesque
+                    varius sapien nibh, a sodales ligula auctor faucibus. Donec suscipit nunc quis lacus finibus sodales. Phasellus ac eros auctor, mattis metus at, volutpat enim. Duis non luctus mi, tempor vulputate lectus. In posuere tellus eget ligula
+                    congue, in efficitur enim tempus. Cras id mollis eros. Cras vulputate aliquam nunc quis faucibus. Sed sit amet molestie dolor. Quisque sed nibh vitae tortor vulputate convallis sed sit amet dolor. Donec eu est tincidunt, molestie mi
+                    in, vulputate nulla. Pellentesque laoreet risus arcu, nec commodo tortor faucibus quis. Nam tempus, neque vitae interdum vulputate, purus mi hendrerit tortor, non efficitur arcu lacus et urna.</p>
+                <ul>
+                    <li>Mauris metus ante</li>
+                    <li>Auctor mattis felis vitae</li>
+                    <li>Nullam mattis tincidunt lacus luctus euismod</li>
+                </ul>
+            </section>
+            <section class="main-section" id="ipsum">
+                <header>Ipsum</header>
+                <p>Vivamus et orci dictum, tempus erat ut, sagittis tellus. Cras a erat in velit tempor dignissim. Aliquam dignissim lacinia vestibulum. Duis luctus faucibus cursus. Sed sed nibh ac mi vehicula facilisis. Cras maximus est nec magna maximus
+                    maximus. Sed nec elit ut lorem auctor sollicitudin. Morbi vitae lacus vel odio molestie ullamcorper. Proin sollicitudin tortor eu suscipit iaculis. Curabitur malesuada nisi ac est vestibulum, ac aliquam metus consequat.</p>
+                <code>if (condition) { statement_1; } else { statement_2; }</code>
+                <p>Pellentesque pellentesque vel nisl sed malesuada. Etiam sollicitudin ultricies nisi, eget auctor sapien egestas vel. Pellentesque efficitur eros vitae purus cursus elementum. Nam at sapien a magna ullamcorper fringilla at eu lorem. Pellentesque
+                    varius sapien nibh, a sodales ligula auctor faucibus. Donec suscipit nunc quis lacus finibus sodales. Phasellus ac eros auctor, mattis metus at, volutpat enim. Duis non luctus mi, tempor vulputate lectus. In posuere tellus eget ligula
+                    congue, in efficitur enim tempus. Cras id mollis eros. Cras vulputate aliquam nunc quis faucibus. Sed sit amet molestie dolor. Quisque sed nibh vitae tortor vulputate convallis sed sit amet dolor. Donec eu est tincidunt, molestie mi
+                    in, vulputate nulla. Pellentesque laoreet risus arcu, nec commodo tortor faucibus quis. Nam tempus, neque vitae interdum vulputate, purus mi hendrerit tortor, non efficitur arcu lacus et urna.</p>
+                <ul>
+                    <li>Mauris metus ante</li>
+                    <li>Auctor mattis felis vitae</li>
+                    <li>Nullam mattis tincidunt lacus luctus euismod</li>
+                </ul>
+            </section>
+            <section class="main-section" id="dolor">
+                <header>Dolor</header>
+                <p>Vivamus et orci dictum, tempus erat ut, sagittis tellus. Cras a erat in velit tempor dignissim. Aliquam dignissim lacinia vestibulum. Duis luctus faucibus cursus. Sed sed nibh ac mi vehicula facilisis. Cras maximus est nec magna maximus
+                    maximus. Sed nec elit ut lorem auctor sollicitudin. Morbi vitae lacus vel odio molestie ullamcorper. Proin sollicitudin tortor eu suscipit iaculis. Curabitur malesuada nisi ac est vestibulum, ac aliquam metus consequat.</p>
+                <code>if (condition) { statement_1; } else { statement_2; }</code>
+                <p>Pellentesque pellentesque vel nisl sed malesuada. Etiam sollicitudin ultricies nisi, eget auctor sapien egestas vel. Pellentesque efficitur eros vitae purus cursus elementum. Nam at sapien a magna ullamcorper fringilla at eu lorem. Pellentesque
+                    varius sapien nibh, a sodales ligula auctor faucibus. Donec suscipit nunc quis lacus finibus sodales. Phasellus ac eros auctor, mattis metus at, volutpat enim. Duis non luctus mi, tempor vulputate lectus. In posuere tellus eget ligula
+                    congue, in efficitur enim tempus. Cras id mollis eros. Cras vulputate aliquam nunc quis faucibus. Sed sit amet molestie dolor. Quisque sed nibh vitae tortor vulputate convallis sed sit amet dolor. Donec eu est tincidunt, molestie mi
+                    in, vulputate nulla. Pellentesque laoreet risus arcu, nec commodo tortor faucibus quis. Nam tempus, neque vitae interdum vulputate, purus mi hendrerit tortor, non efficitur arcu lacus et urna.</p>
+                <ul>
+                    <li>Mauris metus ante</li>
+                    <li>Auctor mattis felis vitae</li>
+                    <li>Nullam mattis tincidunt lacus luctus euismod</li>
+                </ul>
+            </section>
+            <section class="main-section" id="sit">
+                <header>Sit</header>
+                <p>Vivamus et orci dictum, tempus erat ut, sagittis tellus. Cras a erat in velit tempor dignissim. Aliquam dignissim lacinia vestibulum. Duis luctus faucibus cursus. Sed sed nibh ac mi vehicula facilisis. Cras maximus est nec magna maximus
+                    maximus. Sed nec elit ut lorem auctor sollicitudin. Morbi vitae lacus vel odio molestie ullamcorper. Proin sollicitudin tortor eu suscipit iaculis. Curabitur malesuada nisi ac est vestibulum, ac aliquam metus consequat.</p>
+                <code>if (condition) { statement_1; } else { statement_2; }</code>
+                <p>Pellentesque pellentesque vel nisl sed malesuada. Etiam sollicitudin ultricies nisi, eget auctor sapien egestas vel. Pellentesque efficitur eros vitae purus cursus elementum. Nam at sapien a magna ullamcorper fringilla at eu lorem. Pellentesque
+                    varius sapien nibh, a sodales ligula auctor faucibus. Donec suscipit nunc quis lacus finibus sodales. Phasellus ac eros auctor, mattis metus at, volutpat enim. Duis non luctus mi, tempor vulputate lectus. In posuere tellus eget ligula
+                    congue, in efficitur enim tempus. Cras id mollis eros. Cras vulputate aliquam nunc quis faucibus. Sed sit amet molestie dolor. Quisque sed nibh vitae tortor vulputate convallis sed sit amet dolor. Donec eu est tincidunt, molestie mi
+                    in, vulputate nulla. Pellentesque laoreet risus arcu, nec commodo tortor faucibus quis. Nam tempus, neque vitae interdum vulputate, purus mi hendrerit tortor, non efficitur arcu lacus et urna.</p>
+                <ul>
+                    <li>Mauris metus ante</li>
+                    <li>Auctor mattis felis vitae</li>
+                    <li>Nullam mattis tincidunt lacus luctus euismod</li>
+                </ul>
+            </section>
+            <section class="main-section" id="amet">
+                <header>Amet</header>
+                <p>Vivamus et orci dictum, tempus erat ut, sagittis tellus. Cras a erat in velit tempor dignissim. Aliquam dignissim lacinia vestibulum. Duis luctus faucibus cursus. Sed sed nibh ac mi vehicula facilisis. Cras maximus est nec magna maximus
+                    maximus. Sed nec elit ut lorem auctor sollicitudin. Morbi vitae lacus vel odio molestie ullamcorper. Proin sollicitudin tortor eu suscipit iaculis. Curabitur malesuada nisi ac est vestibulum, ac aliquam metus consequat.</p>
+                <code>if (condition) { statement_1; } else { statement_2; }</code>
+                <p>Pellentesque pellentesque vel nisl sed malesuada. Etiam sollicitudin ultricies nisi, eget auctor sapien egestas vel. Pellentesque efficitur eros vitae purus cursus elementum. Nam at sapien a magna ullamcorper fringilla at eu lorem. Pellentesque
+                    varius sapien nibh, a sodales ligula auctor faucibus. Donec suscipit nunc quis lacus finibus sodales. Phasellus ac eros auctor, mattis metus at, volutpat enim. Duis non luctus mi, tempor vulputate lectus. In posuere tellus eget ligula
+                    congue, in efficitur enim tempus. Cras id mollis eros. Cras vulputate aliquam nunc quis faucibus. Sed sit amet molestie dolor. Quisque sed nibh vitae tortor vulputate convallis sed sit amet dolor. Donec eu est tincidunt, molestie mi
+                    in, vulputate nulla. Pellentesque laoreet risus arcu, nec commodo tortor faucibus quis. Nam tempus, neque vitae interdum vulputate, purus mi hendrerit tortor, non efficitur arcu lacus et urna.</p>
+                <ul>
+                    <li>Mauris metus ante</li>
+                    <li>Auctor mattis felis vitae</li>
+                    <li>Nullam mattis tincidunt lacus luctus euismod</li>
+                </ul>
+            </section>
+        </main>
+        <footer>
+            © 2020 <a class="footer-link" href="https://github.com/rubbos" target="_blank">rubbos</a>
+        </footer>
+    </div>
+</body>
+
+</html>
